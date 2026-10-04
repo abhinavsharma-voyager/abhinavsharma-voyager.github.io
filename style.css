@@ -69,7 +69,7 @@ body {
 }
 
 
-/* subtle underline */
+/* ---------- Navigation underline ---------- */
 
 .main-nav a::after {
   content: "";
@@ -99,7 +99,7 @@ main {
 }
 
 
-/* ---------- Sections ---------- */
+/* ---------- General sections ---------- */
 
 section {
   width: min(1200px, 90%);
@@ -114,7 +114,7 @@ section {
 }
 
 
-/* ---------- Future typography system ---------- */
+/* ---------- Typography ---------- */
 
 h1 {
   font-size: clamp(4rem, 8vw, 7rem);
@@ -149,7 +149,66 @@ p {
 }
 
 
-/* ---------- Selection ---------- */
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.profile-intro {
+  width: min(1180px, 88%);
+
+  margin: 0 auto;
+
+  padding: 110px 0 140px;
+
+  min-height: auto;
+
+  border-bottom: none;
+}
+
+
+/* Small section label */
+
+.page-label {
+  font-size: 16px;
+  font-weight: 500;
+
+  color: #746f66;
+
+  margin-bottom: 24px;
+}
+
+
+/* Main profile headline */
+
+.profile-intro h1 {
+  font-size: clamp(4rem, 7vw, 6.5rem);
+
+  line-height: 0.98;
+
+  font-weight: 500;
+
+  letter-spacing: -0.055em;
+
+  max-width: 1100px;
+
+  margin: 0 0 48px 0;
+}
+
+
+/* Profile introduction paragraph */
+
+.profile-text {
+  font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+
+  line-height: 1.65;
+
+  max-width: 780px;
+
+  margin: 0;
+}
+
+
+/* ---------- Text selection ---------- */
 
 ::selection {
   background: #d8cbb8;
@@ -157,13 +216,16 @@ p {
 }
 
 
-/* ---------- Mobile ---------- */
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 800px) {
 
   .site-header {
     padding: 24px 5%;
   }
+
 
   .main-nav {
     justify-content: flex-start;
@@ -175,9 +237,11 @@ p {
     scrollbar-width: none;
   }
 
+
   .main-nav::-webkit-scrollbar {
     display: none;
   }
+
 
   .main-nav a {
     flex-shrink: 0;
@@ -185,12 +249,36 @@ p {
     font-size: 15px;
   }
 
+
   section {
     width: 90%;
 
     min-height: 600px;
 
     padding: 90px 0;
+  }
+
+
+  .profile-intro {
+    width: 90%;
+
+    padding: 80px 0 110px;
+
+    min-height: auto;
+  }
+
+
+  .profile-intro h1 {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+
+    margin-bottom: 36px;
+  }
+
+
+  .profile-text {
+    font-size: 1.2rem;
+
+    line-height: 1.6;
   }
 
 }
