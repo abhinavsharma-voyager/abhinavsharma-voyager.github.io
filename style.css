@@ -1,21 +1,20 @@
 /* =========================================================
-   AUTONOMOUS VOYAGE — BASE VISUAL SYSTEM
+   AUTONOMOUS VOYAGE
+   Clean beige / white visual system
    ========================================================= */
 
 
-/* ---------- Global reset ---------- */
+/* ---------- Base ---------- */
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   font-family:
@@ -25,211 +24,179 @@ body {
     "Segoe UI",
     sans-serif;
 
-  background: #f7f8fa;
-  color: #111827;
+  background: #f3efe7;
+  color: #1c1b18;
 
-  min-height: 100vh;
-  overflow-x: hidden;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 
-/* =========================================================
-   SUBTLE BACKGROUND EFFECT
-   ========================================================= */
-
-body::before {
-  content: "";
-
-  position: fixed;
-  inset: 0;
-
-  pointer-events: none;
-
-  background:
-    radial-gradient(
-      circle at 15% 20%,
-      rgba(80, 120, 255, 0.08),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 85% 70%,
-      rgba(60, 180, 170, 0.06),
-      transparent 35%
-    );
-
-  z-index: -1;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* ---------- Header ---------- */
 
 .site-header {
-  position: sticky;
-  top: 0;
-
   width: 100%;
-
-  z-index: 100;
-
-  padding: 18px 24px;
+  padding: 30px 5%;
 }
 
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+/* ---------- Navigation ---------- */
 
 .main-nav {
-  width: fit-content;
-
+  max-width: 1200px;
   margin: 0 auto;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
-  gap: 8px;
-
-  padding: 8px;
-
-  background: rgba(255, 255, 255, 0.72);
-
-  border: 1px solid rgba(17, 24, 39, 0.08);
-
-  border-radius: 100px;
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  box-shadow:
-    0 8px 30px rgba(17, 24, 39, 0.06);
+  gap: 42px;
 }
 
-
-/* ---------- Navigation links ---------- */
-
 .main-nav a {
-  position: relative;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 42px;
-
-  padding: 0 18px;
-
-  border-radius: 100px;
-
-  color: #555d6c;
+  color: #1c1b18;
 
   text-decoration: none;
 
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
 
   letter-spacing: -0.01em;
 
-  transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    transform 0.25s ease;
+  position: relative;
+
+  padding: 6px 0;
 }
 
 
-/* ---------- Hover effect ---------- */
+/* subtle underline */
 
-@media (hover: hover) {
+.main-nav a::after {
+  content: "";
 
-  .main-nav a:hover {
-    color: #111827;
+  position: absolute;
 
-    background: rgba(17, 24, 39, 0.055);
+  left: 0;
+  bottom: 0;
 
-    transform: translateY(-1px);
-  }
+  width: 0;
+  height: 1px;
 
+  background: #1c1b18;
+
+  transition: width 0.25s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
 
 
-/* ---------- Keyboard accessibility ---------- */
-
-.main-nav a:focus-visible {
-  outline: 2px solid #111827;
-  outline-offset: 3px;
-}
-
-
-/* =========================================================
-   MAIN SECTIONS
-   ========================================================= */
+/* ---------- Main ---------- */
 
 main {
   width: 100%;
 }
 
 
-section {
-  width: min(1200px, calc(100% - 48px));
+/* ---------- Sections ---------- */
 
-  min-height: 650px;
+section {
+  width: min(1200px, 90%);
 
   margin: 0 auto;
 
-  border-bottom: 1px solid rgba(17, 24, 39, 0.07);
+  min-height: 720px;
+
+  padding: 120px 0;
+
+  border-bottom: 1px solid #d9d3c7;
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* ---------- Future typography system ---------- */
 
-@media (max-width: 760px) {
+h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  line-height: 0.95;
+
+  font-weight: 500;
+
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  font-size: 2rem;
+
+  font-weight: 500;
+
+  letter-spacing: -0.025em;
+}
+
+p {
+  max-width: 720px;
+}
+
+
+/* ---------- Selection ---------- */
+
+::selection {
+  background: #d8cbb8;
+  color: #1c1b18;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 800px) {
 
   .site-header {
-    padding: 12px;
+    padding: 24px 5%;
   }
 
-
   .main-nav {
-    width: 100%;
-
     justify-content: flex-start;
+
+    gap: 24px;
 
     overflow-x: auto;
 
     scrollbar-width: none;
   }
 
-
   .main-nav::-webkit-scrollbar {
     display: none;
   }
 
-
   .main-nav a {
-    flex: 0 0 auto;
+    flex-shrink: 0;
 
-    padding: 0 14px;
-
-    font-size: 13px;
+    font-size: 15px;
   }
 
-
   section {
-    width: min(100% - 28px, 1200px);
+    width: 90%;
 
-    min-height: 550px;
+    min-height: 600px;
+
+    padding: 90px 0;
   }
 
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
+/* ---------- Reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -237,12 +204,8 @@ section {
     scroll-behavior: auto;
   }
 
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+  * {
+    transition: none !important;
   }
 
 }
