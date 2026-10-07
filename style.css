@@ -181,7 +181,7 @@ p {
 /* Main profile headline */
 
 .profile-intro h1 {
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
 
   line-height: 0.98;
 
@@ -191,20 +191,356 @@ p {
 
   max-width: 1100px;
 
-  margin: 0 0 48px 0;
+  margin: 0 0 36px 0;
 }
 
 
 /* Profile introduction paragraph */
 
 .profile-text {
-  font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
 
   line-height: 1.65;
 
   max-width: 780px;
 
   margin: 0;
+}
+
+
+.profile-text + .profile-text {
+  margin-top: 20px;
+}
+
+
+/* Focus area tags */
+
+.tags-label {
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #746f66;
+
+  margin-top: 36px;
+}
+
+.focus-tags {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.focus-tags li {
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #4a463f;
+
+  padding: 6px 14px;
+
+  border: 1px solid #d9d3c7;
+  border-radius: 999px;
+}
+
+
+/* ---------- Content sections ---------- */
+
+.content-section {
+  width: min(1180px, 88%);
+
+  min-height: auto;
+
+  padding: 72px 0;
+
+  border-top: 1px solid #d9d3c7;
+  border-bottom: none;
+}
+
+.content-section h2 {
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+
+  margin-bottom: 40px;
+}
+
+
+/* ---------- Contact list ---------- */
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+
+  gap: 32px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #e4dfd5;
+}
+
+.contact-row:first-child {
+  padding-top: 0;
+}
+
+.contact-row:last-child {
+  border-bottom: none;
+}
+
+.contact-row dt {
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #746f66;
+
+  padding-top: 2px;
+}
+
+.contact-row dd {
+  font-size: 1.05rem;
+
+  overflow-wrap: anywhere;
+}
+
+.contact-row a {
+  color: inherit;
+
+  text-decoration: underline;
+  text-decoration-color: #c9c1b3;
+  text-underline-offset: 4px;
+
+  transition: text-decoration-color 0.2s ease;
+}
+
+.contact-row a:hover {
+  text-decoration-color: #1c1b18;
+}
+
+
+/* ---------- Skill groups ---------- */
+
+.skill-group {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+
+  gap: 32px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #e4dfd5;
+}
+
+.skill-group:first-child {
+  padding-top: 0;
+}
+
+.skill-group:last-child {
+  border-bottom: none;
+}
+
+.skill-group dt {
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #746f66;
+
+  padding-top: 4px;
+}
+
+.skill-group .skill-tags {
+  margin-top: 0;
+}
+
+
+/* ---------- Data table ---------- */
+
+.data-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 16px;
+}
+
+.data-table th {
+  text-align: left;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #746f66;
+
+  padding: 0 16px 14px 0;
+
+  border-bottom: 1px solid #d9d3c7;
+}
+
+.data-table td {
+  padding: 18px 16px 18px 0;
+
+  vertical-align: top;
+
+  border-bottom: 1px solid #e4dfd5;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table td:first-child {
+  font-weight: 500;
+}
+
+.data-table td:nth-child(3) {
+  white-space: nowrap;
+}
+
+
+/* ---------- Timeline ---------- */
+
+.timeline {
+  list-style: none;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+
+  gap: 32px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid #e4dfd5;
+}
+
+.timeline-item:first-child {
+  padding-top: 0;
+}
+
+.timeline-item:last-child {
+  border-bottom: none;
+}
+
+.timeline-date {
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #746f66;
+
+  padding-top: 4px;
+}
+
+.timeline-item h3 {
+  font-size: 1.3rem;
+
+  margin-bottom: 4px;
+}
+
+.timeline-org {
+  font-size: 1.05rem;
+}
+
+.entry-label {
+  display: inline-block;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #746f66;
+
+  padding: 2px 10px;
+  margin-bottom: 8px;
+
+  border: 1px solid #d9d3c7;
+  border-radius: 999px;
+}
+
+.timeline-item h3 a,
+.timeline-org a {
+  color: inherit;
+
+  text-decoration: underline;
+  text-decoration-color: #c9c1b3;
+  text-underline-offset: 4px;
+
+  transition: text-decoration-color 0.2s ease;
+}
+
+.timeline-item h3 a:hover,
+.timeline-org a:hover {
+  text-decoration-color: #1c1b18;
+}
+
+.timeline-authors {
+  font-size: 15px;
+
+  color: #746f66;
+
+  margin-top: 4px;
+}
+
+.timeline-authors strong {
+  color: #1c1b18;
+  font-weight: 600;
+}
+
+.timeline-points {
+  max-width: 780px;
+
+  margin-top: 12px;
+  padding-left: 20px;
+
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #3a3731;
+}
+
+.timeline-points li + li {
+  margin-top: 6px;
+}
+
+.skill-tags {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 16px;
+}
+
+.skill-tags li {
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #4a463f;
+
+  background: #e8e2d6;
+
+  padding: 4px 12px;
+
+  border-radius: 999px;
+}
+
+.timeline-meta {
+  font-size: 15px;
+
+  color: #746f66;
+
+  margin-top: 6px;
 }
 
 
@@ -269,14 +605,76 @@ p {
 
 
   .profile-intro h1 {
-    font-size: clamp(2.8rem, 12vw, 4.2rem);
+    font-size: clamp(2.2rem, 9vw, 3rem);
 
-    margin-bottom: 36px;
+    margin-bottom: 28px;
+  }
+
+
+  .content-section {
+    width: 90%;
+
+    padding: 56px 0;
+  }
+
+
+  .contact-row,
+  .skill-group {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
+  .data-table thead {
+    display: none;
+  }
+
+
+  .data-table tr {
+    display: block;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #e4dfd5;
+  }
+
+
+  .data-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+
+  .data-table td {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+
+    gap: 12px;
+
+    padding: 3px 0;
+
+    border-bottom: none;
+  }
+
+
+  .data-table td::before {
+    content: attr(data-label);
+
+    font-size: 13px;
+
+    color: #746f66;
+  }
+
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+
+    gap: 6px;
   }
 
 
   .profile-text {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
 
     line-height: 1.6;
   }
