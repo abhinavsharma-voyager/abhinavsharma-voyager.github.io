@@ -170,11 +170,12 @@ p {
 
 .profile-header {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: minmax(0, 780px) 220px;
 
-  gap: 64px;
+  gap: 48px;
 
   align-items: center;
+  justify-content: start;
 }
 
 .profile-photo {
@@ -640,16 +641,11 @@ p {
 
 
   .profile-header {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) 140px;
 
-    gap: 32px;
-  }
+    gap: 24px;
 
-
-  .profile-photo {
-    grid-row: 1;
-
-    width: 180px;
+    align-items: start;
   }
 
 
@@ -712,6 +708,24 @@ p {
     font-size: 1.05rem;
 
     line-height: 1.6;
+  }
+
+}
+
+
+/* ---------- Small phones ---------- */
+
+@media (max-width: 520px) {
+
+  .profile-header {
+    grid-template-columns: 1fr;
+  }
+
+
+  .profile-photo {
+    grid-row: 1;
+
+    width: 140px;
   }
 
 }
