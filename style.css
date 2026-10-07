@@ -166,6 +166,27 @@ p {
 }
 
 
+/* Profile header with photo */
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+
+  gap: 64px;
+
+  align-items: center;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+
+  border-radius: 20px;
+
+  border: 1px solid #d9d3c7;
+}
+
+
 /* Small section label */
 
 .page-label {
@@ -615,6 +636,20 @@ p {
     width: 90%;
 
     padding: 56px 0;
+  }
+
+
+  .profile-header {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+
+  .profile-photo {
+    grid-row: 1;
+
+    width: 180px;
   }
 
 
