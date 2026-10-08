@@ -87,8 +87,13 @@ body {
   transition: width 0.25s ease;
 }
 
-.main-nav a:hover::after {
+.main-nav a:hover::after,
+.main-nav a.active::after {
   width: 100%;
+}
+
+.main-nav a.active {
+  font-weight: 600;
 }
 
 

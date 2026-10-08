@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Research & Projects | Autonomous Voyage</title>
+  <title>Academic Projects | Autonomous Voyage</title>
 
+  <meta name="description" content="Academic projects by Abhinav Sharma in computer science and transportation systems, from vehicle control in CARLA to traffic operations.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -18,14 +20,7 @@
 
   <main class="page-content">
     <section class="profile-intro">
-      <p class="page-label">Research & Projects</p>
-
-      <h1>Research & Projects</h1>
-
-      <p class="profile-text">
-        My research and projects span automated driving, traffic safety, and
-        traffic operations.
-      </p>
+      <h1>Academic Projects</h1>
 
       <p class="profile-text">
         Each project below marks a step in my voyage: from civil engineering
@@ -34,68 +29,25 @@
     </section>
 
     <section class="content-section">
-      <h2>Research Projects</h2>
+      <h2>Computer Science</h2>
 
       <ol class="timeline">
         <li class="timeline-item">
-          <p class="timeline-date">2026 – Present</p>
+          <p class="timeline-date">2023</p>
           <div>
-            <p class="entry-label">Literature Review</p>
-            <h3>What Happens Before a Crash? A Critical Review of Risk Perception and Risk Measurement</h3>
-            <p class="timeline-org">NCSITE Annual Meeting 2026 (for presentation)</p>
+            <p class="entry-label">Graduate Project</p>
+            <h3>Vehicle Control in the CARLA Simulator: PID and Predictive Steering</h3>
+            <p class="timeline-org">North Carolina State University · CSC 591 Embedded/Real-Time Systems for Autonomous Driving with Machine Learning</p>
             <ul class="timeline-points">
-              <li>Review and evaluate collision-risk metrics to determine the safety dimensions represented by each measure.</li>
-              <li>Develop a structured framework describing the progression from nominal driving through conflict development, threat perception, driver response, evasive action, and collision or successful avoidance.</li>
-              <li>Identify limitations of existing safety measures in distinguishing different stages of pre-crash risk development.</li>
-              <li>Synthesize safety literature to clarify how individual metrics should be interpreted when assessing driving-system safety.</li>
+              <li><strong>Problem:</strong> drive an automated vehicle along a route in the CARLA simulator as quickly as possible while minimizing lane invasions and collisions.</li>
+              <li><strong>Approach:</strong> built a custom CARLA agent with tuned longitudinal (speed) and lateral (steering) PID controllers, and added collision and lane-invasion counters to measure performance. Then replaced the PID steering with a sampling-based predictive controller that simulates candidate steering angles over a short horizon with a kinematic vehicle model, selects the angle that best tracks upcoming waypoints, and limits steering at higher speeds.</li>
+              <li><strong>Result:</strong> the tuned PID agent completed the route in 21.6 s at speeds above 70 km/h, with 5 lane invasions.</li>
             </ul>
             <ul class="skill-tags">
-              <li>Risk Definitions</li>
-              <li>Collision-Risk Metrics</li>
-              <li>Pre-Crash Process</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <p class="timeline-date">2027</p>
-          <div>
-            <p class="entry-label">Poster Presentation</p>
-            <h3><a href="https://arxiv.org/abs/2607.27085" target="_blank" rel="noopener">Controlled Experiments on Lane Changing by Transitional Autonomous Vehicle: Dataset and Behavioral Insights</a></h3>
-            <p class="timeline-org">TRB Annual Meeting 2027 · <a href="https://arxiv.org/abs/2607.27085" target="_blank" rel="noopener">arXiv:2607.27085</a></p>
-            <p class="timeline-authors"><strong>Abhinav Sharma</strong>, Md Abdullah Al Hasan, Danjue Chen, George F. List</p>
-            <ul class="timeline-points">
-              <li>Analyzed empirical autonomous-vehicle data to characterize lane-changing behavior.</li>
-              <li>Identified driving-performance variables associated with autonomous lane changes.</li>
-              <li>Evaluated lane-changing safety using surrogate safety measures and trajectory-based interaction metrics.</li>
-            </ul>
-            <ul class="skill-tags">
-              <li>Behavioral Analysis</li>
-              <li>Safety Analysis</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <p class="timeline-date">2026</p>
-          <div>
-            <p class="entry-label">Preprint</p>
-            <h3><a href="https://arxiv.org/abs/2603.05716" target="_blank" rel="noopener">Introducing the Transitional Autonomous Vehicle Lane-Changing Dataset: Empirical Experiments</a></h3>
-            <p class="timeline-org"><a href="https://arxiv.org/abs/2603.05716" target="_blank" rel="noopener">arXiv:2603.05716</a></p>
-            <p class="timeline-authors"><strong>Abhinav Sharma</strong>, Zijun He, Danjue Chen</p>
-            <ul class="timeline-points">
-              <li>Designed controlled lane-changing scenarios for automated-vehicle testing.</li>
-              <li>Conducted field experiments with a transitional autonomous vehicle.</li>
-              <li>Instrumented the vehicle with GNSS, LiDAR, cameras, and CAN-based data acquisition systems.</li>
-              <li>Collected trajectory and interaction data across controlled lane-changing scenarios.</li>
-              <li>Documented experimental conditions, scenario configurations, and datasets for subsequent safety and behavioral analysis.</li>
-            </ul>
-            <ul class="skill-tags">
-              <li>Conceptual Design</li>
-              <li>Field Testing</li>
-              <li>Sensors &amp; Instrumentation</li>
-              <li>Field Data Collection</li>
-              <li>Dataset</li>
+              <li>CARLA</li>
+              <li>PID Control</li>
+              <li>Predictive Control</li>
+              <li>Python</li>
             </ul>
           </div>
         </li>
@@ -103,22 +55,19 @@
         <li class="timeline-item">
           <p class="timeline-date">2023</p>
           <div>
-            <p class="entry-label">Conference Presentation</p>
-            <h3><a href="https://publications.jrc.ec.europa.eu/repository/bitstream/JRC134973/JRC134973_01.pdf#page=343" target="_blank" rel="noopener">Data-Driven Safety Assessment of Adaptive Cruise Control</a></h3>
-            <p class="timeline-org">JRC-EU, Ispra, Italy · <a href="https://publications.jrc.ec.europa.eu/repository/bitstream/JRC134973/JRC134973_01.pdf#page=343" target="_blank" rel="noopener">Extended abstract (PDF)</a></p>
-            <p class="timeline-authors"><strong>Abhinav Sharma</strong>, Danjue Chen, Zuduo Zheng, Yuanchang Xie</p>
+            <p class="entry-label">Graduate Project</p>
+            <h3>Cruise Controller Design and Formal Verification</h3>
+            <p class="timeline-org">North Carolina State University · CSC 591 Embedded/Real-Time Systems for Autonomous Driving with Machine Learning</p>
             <ul class="timeline-points">
-              <li>Analyzed empirical car-following data to evaluate adaptive cruise control safety under hypothetical emergency-braking scenarios.</li>
-              <li>Applied a distance-based safety-margin framework to quantify collision-avoidance capability under different following conditions.</li>
-              <li>Identified reduced safety margins at shorter headways and conditions under which collision avoidance became infeasible.</li>
-              <li>Evaluated limitations of conventional surrogate measures, including time-to-collision and deceleration rate to avoid crash, for assessing emergency interactions.</li>
+              <li><strong>Problem:</strong> design a cruise controller as a synchronous real-time system and verify that it behaves safely.</li>
+              <li><strong>Approach:</strong> implemented the controller in Lustre as four components (speed measurement, set speed, speed control, and actuation), verified with the Luke model checker that engine force is zero whenever cruise control is off, and redesigned the speed control using PID.</li>
+              <li><strong>Result:</strong> the PID version produced smoother force changes and faster settling than the original step-based controller, whose abrupt force changes would cause passenger jerk.</li>
             </ul>
             <ul class="skill-tags">
-              <li>Car-Following Analysis</li>
-              <li>Safety-Margin Modeling</li>
-              <li>Time-to-Collision (TTC)</li>
-              <li>DRAC</li>
-              <li>Empirical Data Analysis</li>
+              <li>Lustre</li>
+              <li>PID Control</li>
+              <li>Formal Verification</li>
+              <li>Real-Time Systems</li>
             </ul>
           </div>
         </li>
@@ -126,46 +75,83 @@
         <li class="timeline-item">
           <p class="timeline-date">2023</p>
           <div>
-            <p class="entry-label">Poster Presentation</p>
-            <h3>We Have Been Wrong: Gipps Car-Following Model</h3>
-            <p class="timeline-org">TRB Annual Meeting 2023</p>
-            <p class="timeline-authors">Danjue Chen, <strong>Abhinav Sharma</strong>, Zuduo Zheng</p>
+            <p class="entry-label">Graduate Project</p>
+            <h3>Meal Delivery with the Stretch Robot</h3>
+            <p class="timeline-org">University of Massachusetts Lowell · COMP 5500 Assistive Robots</p>
             <ul class="timeline-points">
-              <li>Re-derived collision-free car-following equations under constrained follower behavior.</li>
-              <li>Developed the Full-Scale Gipps Model and corresponding equilibrium-spacing equations.</li>
-              <li>Identified conditions under which the original Gipps formulation does not remain collision-free.</li>
-              <li>Calibrated and evaluated these conditions using NGSIM trajectory data.</li>
+              <li><strong>Problem:</strong> help older adults and people with limited mobility get meals at home using a shared-autonomy assistive robot (Hello Robot Stretch).</li>
+              <li><strong>Approach:</strong> in a team of four, built a ROS system with autonomous map-based navigation and teleoperated manipulation; developed the perception pipeline, using OpenCV and deep-learning object detection with depth images to locate objects.</li>
+              <li><strong>Result:</strong> demonstrated autonomous navigation in a proof of concept; object detection worked on simple scenes but did not yet detect all kitchen objects.</li>
             </ul>
             <ul class="skill-tags">
-              <li>Car-Following Models</li>
-              <li>Analytical Modeling</li>
-              <li>Model Calibration</li>
-              <li>NGSIM Data</li>
+              <li>ROS</li>
+              <li>Hello Robot Stretch</li>
+              <li>OpenCV</li>
+              <li>Object Detection</li>
+              <li>Shared Autonomy</li>
             </ul>
           </div>
         </li>
 
         <li class="timeline-item">
-          <p class="timeline-date">2021 – 2022</p>
+          <p class="timeline-date">2022</p>
           <div>
-            <p class="entry-label">B.Tech. Major Project</p>
-            <h3>Exclusive Two-Wheeler Lanes Under Heterogeneous Traffic Conditions</h3>
-            <p class="timeline-org">Indian Institute of Technology Jammu · Supervisor: Dr. Ankit Kathuria</p>
+            <p class="entry-label">Graduate Project</p>
+            <h3>Driving an Underpowered Car Up a Mountain</h3>
+            <p class="timeline-org">University of Massachusetts Lowell · COMP 5435 Reinforcement Learning</p>
             <ul class="timeline-points">
-              <li>Analyzed the impact of exclusive two-wheeler lanes under heterogeneous traffic conditions using VISSIM microsimulation.</li>
-              <li>Collected traffic data from expressways and highways and evaluated traffic conditions using DataFromSky.</li>
-              <li>Calibrated a VISSIM model for Indian heterogeneous traffic using sensitivity analysis, informed by prior research.</li>
-              <li>Simulated segregating two-wheelers from mixed traffic and studied how lane width and the share of two-wheelers in the vehicle mix affect traffic capacity.</li>
-              <li>Determined the optimum two-wheeler lane configuration and developed equations for traffic capacity, operating speed, and level of service (LOS).</li>
-              <li>Studied traffic stream parameters, including geometric design, highway capacity, and PCU equivalents.</li>
+              <li><strong>Problem:</strong> the car is underpowered and must first move away from the goal to build momentum. The state (position and velocity) is continuous, so tabular methods cannot be used.</li>
+              <li><strong>Approach:</strong> approximated the action-value function with Fourier-basis features and learned with episodic semi-gradient SARSA, including n-step variants (n = 1, 8, 16). Also applied actor-critic with eligibility traces, a policy-gradient method, to the same task.</li>
+              <li><strong>Result:</strong> the best n depended on the step size: with a low step size, n = 16 reached the goal in fewer steps early on; with a high step size, n = 1 did better. Given enough episodes, the variants performed similarly.</li>
             </ul>
             <ul class="skill-tags">
-              <li>VISSIM</li>
-              <li>Traffic Microsimulation</li>
-              <li>Model Calibration</li>
-              <li>Sensitivity Analysis</li>
-              <li>DataFromSky</li>
-              <li>Capacity &amp; LOS Analysis</li>
+              <li>Function Approximation</li>
+              <li>Fourier Basis</li>
+              <li>Semi-Gradient SARSA</li>
+              <li>Actor-Critic</li>
+              <li>Continuous State Space</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <p class="timeline-date">2022</p>
+          <div>
+            <p class="entry-label">Graduate Project</p>
+            <h3>N-Step SARSA Across Four Environments</h3>
+            <p class="timeline-org">University of Massachusetts Lowell · COMP 5435 Reinforcement Learning</p>
+            <ul class="timeline-points">
+              <li><strong>Problem:</strong> evaluate how n-step SARSA performs in environments with different reward structures: terminal-only reward (Blackjack, Frozen Lake) and per-step reward (Taxi, Cliff Walking), including one stochastic environment (Frozen Lake).</li>
+              <li><strong>Approach:</strong> implemented n-step SARSA and ran hyperparameter sensitivity analyses for each environment. Used n = ∞ (Monte Carlo) where reward arrives only at the end of an episode and n = 1 where reward arrives at every step.</li>
+              <li><strong>Result:</strong> the agent learned to complete the Taxi task, with ε = 0.1 and a decaying ε giving good returns. The Frozen Lake policy was checked under slippery conditions and produced an appropriate path.</li>
+            </ul>
+            <ul class="skill-tags">
+              <li>N-Step SARSA</li>
+              <li>Hyperparameter Sensitivity</li>
+              <li>Monte Carlo</li>
+              <li>OpenAI Gym</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <p class="timeline-date">2022</p>
+          <div>
+            <p class="entry-label">Graduate Project</p>
+            <h3>Comparing Temporal-Difference Control Algorithms: SARSA, Q-Learning, and Double Q-Learning</h3>
+            <p class="timeline-org">University of Massachusetts Lowell · COMP 5435 Reinforcement Learning</p>
+            <ul class="timeline-points">
+              <li><strong>Problem:</strong> compare temporal-difference control methods on Cliff Walking, where stepping off the cliff gives a reward of −100, and on a gridworld with stochastic rewards.</li>
+              <li><strong>Approach:</strong> implemented SARSA, Q-learning, and Double Q-learning with ε-greedy exploration (fixed and decaying ε). Cliff Walking used 50 independent runs of 500 episodes each (ε = 0.1, α = 0.5, undiscounted).</li>
+              <li><strong>Result:</strong> with a fixed ε, SARSA learned the safer path; with a decaying ε, it also moved toward the optimal, riskier path. On the stochastic-reward gridworld, Double Q-learning found a better policy than Q-learning, consistent with it avoiding maximization bias.</li>
+            </ul>
+            <ul class="skill-tags">
+              <li>SARSA</li>
+              <li>Q-Learning</li>
+              <li>Double Q-Learning</li>
+              <li>On-Policy vs. Off-Policy</li>
+              <li>Python</li>
             </ul>
           </div>
         </li>
@@ -173,7 +159,7 @@
     </section>
 
     <section class="content-section">
-      <h2>Academic Projects</h2>
+      <h2>Transportation Systems</h2>
 
       <ol class="timeline">
         <li class="timeline-item">
@@ -181,12 +167,11 @@
           <div>
             <p class="entry-label">Graduate Project</p>
             <h3>Performance Evaluation of a Freeway Segment Using TransModeler 7.0</h3>
-            <p class="timeline-org">North Carolina State University</p>
+            <p class="timeline-org">North Carolina State University · CE 507 Sensors, Instrumentation, and Data Analytics for Transportation Networks</p>
             <ul class="timeline-points">
-              <li>Evaluated a 5-mile, 5-interchange segment of the I-264 freeway in Portsmouth, Virginia, using TransModeler microsimulation, analyzing traffic demand, headways, speeds, travel times, and lane-changing behavior.</li>
-              <li>Identified merge and diverge zones, particularly the L4–L6 segment, as critical bottlenecks driven by heavy lane changing combined with high on-ramp merging volumes.</li>
-              <li>Found that peak-hour congestion builds rapidly between 6:30 and 8:00 AM, with downstream speeds dropping to 10–30 mph and travel times rising from 50–60 seconds to 70–90 seconds.</li>
-              <li>Estimated congestion growth of 0.055 min/mile per minute (about 3.3 seconds of added delay per mile each minute), providing baseline metrics for designing and evaluating mitigation strategies.</li>
+              <li><strong>Problem:</strong> where and how does congestion form on a 5-mile, 5-interchange segment of the I-264 freeway in Portsmouth, Virginia, during the morning peak?</li>
+              <li><strong>Approach:</strong> used TransModeler microsimulation to analyze traffic demand, headways, speeds, travel times, and lane-changing behavior across segments and over time.</li>
+              <li><strong>Result:</strong> merge and diverge zones were the main bottlenecks; congestion built rapidly between 6:30 and 8:00 AM, with downstream speeds falling to 10–30 mph and travel times rising from 50–60 s to 70–90 s, growing at about 0.055 min/mile per minute.</li>
             </ul>
             <ul class="skill-tags">
               <li>TransModeler</li>
@@ -203,14 +188,17 @@
           <div>
             <p class="entry-label">Graduate Project</p>
             <h3>Effect of Autonomous Vehicles on Intersection Capacity</h3>
-            <p class="timeline-org">North Carolina State University</p>
+            <p class="timeline-org">North Carolina State University · CE 502 Traffic Operations</p>
             <ul class="timeline-points">
-              <li>Reviewed and clustered existing literature on capacity estimation methods and capacity improvement strategies for intersections with autonomous vehicles.</li>
+              <li><strong>Problem:</strong> how will automated vehicles change the capacity of signalized intersections, when standard HCM methods assume human-driven traffic?</li>
+              <li><strong>Approach:</strong> wrote a review paper grouping the literature into capacity estimation methods, capacity improvement strategies, and capacity analysis, and proposed a field test-bed for studying AVs at a signalized intersection.</li>
+              <li><strong>Result:</strong> most studies report capacity gains (around 40% at full AV penetration), but the evidence comes mainly from simulation with unverified AV parameters, and some studies report decreases, highlighting the need for field studies.</li>
             </ul>
             <ul class="skill-tags">
               <li>Literature Review</li>
+              <li>Automated Vehicles</li>
               <li>Intersection Capacity</li>
-              <li>Autonomous Vehicles</li>
+              <li>Highway Capacity Manual</li>
             </ul>
           </div>
         </li>
@@ -219,15 +207,19 @@
           <p class="timeline-date">2023</p>
           <div>
             <p class="entry-label">Graduate Project</p>
-            <h3>Evaluating Operational Performance of a Signalized Intersection</h3>
-            <p class="timeline-org">North Carolina State University</p>
+            <h3>Validating Control Delay Estimates at a Signalized Intersection</h3>
+            <p class="timeline-org">North Carolina State University · CE 502 Traffic Operations</p>
             <ul class="timeline-points">
-              <li>Recorded a signalized intersection on camera to count through vehicles and evaluate its operational performance.</li>
+              <li><strong>Problem:</strong> does the HCM control delay model match the delay measured in the field at a real signalized intersection (Avent Ferry Rd and Varsity Dr, Raleigh, NC)?</li>
+              <li><strong>Approach:</strong> in a team of five, video-recorded the through lane during the evening peak, used regression on cumulative arrivals and departures to estimate arrival rate and saturation flow, and computed capacity and HCM control delay.</li>
+              <li><strong>Result:</strong> the modeled delay of 32.7 s/veh closely matched the 29.6 s/veh measured in the field (v/c = 0.69, LOS C).</li>
             </ul>
             <ul class="skill-tags">
+              <li>Highway Capacity Manual</li>
+              <li>Signalized Intersections</li>
+              <li>Field Data Collection</li>
+              <li>Regression Analysis</li>
               <li>Python</li>
-              <li>Statistical Data Analysis</li>
-              <li>Video Data Collection</li>
             </ul>
           </div>
         </li>
@@ -236,32 +228,19 @@
           <p class="timeline-date">2023</p>
           <div>
             <p class="entry-label">Graduate Project</p>
-            <h3>Meal Delivery with Sketch Robot</h3>
-            <p class="timeline-org">University of Massachusetts Lowell</p>
+            <h3>Capabilities and Limitations of Car-Following Models: Newell, GM, IDM, and Gipps</h3>
+            <p class="timeline-org">University of Massachusetts Lowell · CIVE 5490 Traffic Flow Theory</p>
             <ul class="timeline-points">
-              <li>Worked with ROS packages to build a meal-delivery application on a robot platform.</li>
-            </ul>
-            <ul class="skill-tags">
-              <li>ROS</li>
-              <li>Robotics</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <p class="timeline-date">2023</p>
-          <div>
-            <p class="entry-label">Graduate Project</p>
-            <h3>Capabilities and Limitations of Car-Following Models: Gipps, IDM, and Newell</h3>
-            <p class="timeline-org">University of Massachusetts Lowell</p>
-            <ul class="timeline-points">
-              <li>Studied the capabilities and limitations of the Gipps, Intelligent Driver (IDM), and Newell car-following models.</li>
+              <li><strong>Problem:</strong> how realistic are standard car-following models, and how well do they reproduce real automated vehicle (ACC) following?</li>
+              <li><strong>Approach:</strong> simulated 20 vehicles behind an oscillating leader using the Newell, GM, IDM, and Gipps models, then compared IDM and Gipps predictions with three real ACC follower trajectories.</li>
+              <li><strong>Result:</strong> IDM and Gipps damped speed oscillations in simulation, but the real ACC followers still showed oscillations and speed differences that the models did not capture.</li>
             </ul>
             <ul class="skill-tags">
               <li>Car-Following Models</li>
-              <li>Gipps</li>
               <li>IDM</li>
-              <li>Newell</li>
+              <li>Gipps</li>
+              <li>Automated Vehicle Data</li>
+              <li>Python</li>
             </ul>
           </div>
         </li>
@@ -271,14 +250,17 @@
           <div>
             <p class="entry-label">Graduate Project</p>
             <h3>Understanding Traffic Oscillation Using an Empirical Dataset</h3>
-            <p class="timeline-org">University of Massachusetts Lowell</p>
+            <p class="timeline-org">University of Massachusetts Lowell · CIVE 5490 Traffic Flow Theory</p>
             <ul class="timeline-points">
-              <li>Measured flow, density, and speed before, during, and after traffic disturbances using empirical data.</li>
+              <li><strong>Problem:</strong> how do traffic states evolve during stop-and-go oscillations, and what drives them?</li>
+              <li><strong>Approach:</strong> in a team of three, analyzed trajectories of a 25-vehicle human-driven platoon at three speeds, computing spacing, speed, density, and flow in Python.</li>
+              <li><strong>Result:</strong> oscillations were milder at higher speeds and more severe at lower speeds, where tighter spacing forces drivers to react.</li>
             </ul>
             <ul class="skill-tags">
-              <li>Traffic Flow Theory</li>
               <li>Traffic Oscillation</li>
-              <li>Empirical Data Analysis</li>
+              <li>Car-Following</li>
+              <li>Trajectory Data Analysis</li>
+              <li>Python</li>
             </ul>
           </div>
         </li>
