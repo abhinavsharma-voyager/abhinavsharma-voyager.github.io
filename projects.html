@@ -9,6 +9,9 @@
 
   <meta name="description" content="Academic projects by Abhinav Sharma in computer science and transportation systems, from vehicle control in CARLA to traffic operations.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -23,13 +26,18 @@
       <h1>Academic Projects</h1>
 
       <p class="profile-text">
-        Each project below marks a step in my voyage: from civil engineering
-        foundations, to transportation engineering, to automated driving.
+        My academic projects span across automated vehicle control and traffic
+        operations.
+      </p>
+
+      <p class="jump-links">
+        Jump to: <a href="#computer-science">Computer Science</a> ·
+        <a href="#transportation-systems">Transportation Systems</a>
       </p>
     </section>
 
     <section class="content-section">
-      <h2>Computer Science</h2>
+      <h2 id="computer-science">Computer Science</h2>
 
       <ol class="timeline">
         <li class="timeline-item">
@@ -47,6 +55,27 @@
               <li>CARLA</li>
               <li>PID Control</li>
               <li>Predictive Control</li>
+              <li>Python</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <p class="timeline-date">2023</p>
+          <div>
+            <p class="entry-label">Graduate Project</p>
+            <h3>Traffic Sign Recognition with Convolutional Neural Networks</h3>
+            <p class="timeline-org">North Carolina State University · CSC 591 Embedded/Real-Time Systems for Autonomous Driving with Machine Learning</p>
+            <ul class="timeline-points">
+              <li><strong>Problem:</strong> classify 43 types of road signs (speed limits, warnings, prohibitions, and mandatory directions) from real-world images, a core perception task for automated vehicles.</li>
+              <li><strong>Approach:</strong> built and trained convolutional neural networks in TensorFlow, including VGG-style and Inception (GoogLeNet-style) architectures, and ran a sensitivity analysis on learning rate and network depth.</li>
+              <li><strong>Result:</strong> reached 96.5% accuracy with 64×64 inputs after tuning the learning rate; adding deeper convolution layers did not improve accuracy.</li>
+            </ul>
+            <ul class="skill-tags">
+              <li>Deep Learning</li>
+              <li>CNN</li>
+              <li>TensorFlow</li>
+              <li>Traffic Sign Recognition</li>
               <li>Python</li>
             </ul>
           </div>
@@ -159,7 +188,7 @@
     </section>
 
     <section class="content-section">
-      <h2>Transportation Systems</h2>
+      <h2 id="transportation-systems">Transportation Systems</h2>
 
       <ol class="timeline">
         <li class="timeline-item">
@@ -306,6 +335,14 @@
       </ol>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>
+      © 2026 Abhinav Sharma ·
+      <a href="https://www.linkedin.com/in/abhinav-sharma-a03358168" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://scholar.google.com/citations?user=sjFTKIwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    </p>
+  </footer>
 
   <script src="components/nav.js"></script>
 </body>
